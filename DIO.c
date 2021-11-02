@@ -1,6 +1,6 @@
 # include "bitwise_operation.h"
 # include "DIO.h"
-# include "definitions.h"
+# include "type.h"
 
 void DIO.Init (int_8 port, int_8 pin, int_8 dir)
 {
