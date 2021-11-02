@@ -2,7 +2,7 @@
 # include "DIO.h"
 # include "type.h"
 
-void DIO.Init (int_8 port, int_8 pin, int_8 dir)
+void DIO_Init (int_8 port, int_8 pin, int_8 dir)
 {
 
   set_bit(SYSCTL_RCGCGPIO_R, port)
@@ -86,7 +86,7 @@ switch(port){
 }
 
 
-void DIO.writepin (int_8 port, int_8 pin, int_8 value)
+void DIO_writepin (int_8 port, int_8 pin, int_8 value)
 {
 
     switch(port){
