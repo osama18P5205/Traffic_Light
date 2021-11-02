@@ -78,3 +78,54 @@ switch(port){
     }
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void DIO.writepin (int_8 port, int_8 pin, int_8 value)
+{
+
+    switch(port){
+
+      case port PORTA:
+        if (value == 1){
+          set_bit(GPIO_PORTA_DATA_R, pin)
+          }
+            else if (value == 0){
+              clear_bit(GPIO_PORTA_DATA_R, pin)
+              }
+      case port PORTB:
+        if (value == 1){
+          set_bit(GPIO_PORTB_DATA_R, pin)
+          }
+            else if (value == 0){
+              clear_bit(GPIO_PORTB_DATA_R, pin)
+              }
+       case port PORTC:
+        if (value == 1){
+          set_bit(GPIO_PORTC_DATA_R, pin)
+          }
+            else if (value == 0){
+              clear_bit(GPIO_PORTC_DATA_R, pin)  
+              }
+       case port PORTD:
+        if (value == 1){
+          set_bit(GPIO_PORTD_DATA_R, pin)
+          }
+            else if (value == 0){
+              clear_bit(GPIO_PORTD_DATA_R, pin)
+              }
+        case port PORTE:
+        if (value == 1){
+          set_bit(GPIO_PORTE_DATA_R, pin)
+          }
+            else if (value == 0){
+              clear_bit(GPIO_PORTE_DATA_R, pin)
+              }
+        case port PORTF:
+        if (value == 1){
+          set_bit(GPIO_PORTF_DATA_R, pin)
+          }
+            else if (value == 0){
+              clear_bit(GPIO_PORTF_DATA_R, pin)
+              }
+    }
+
+}
