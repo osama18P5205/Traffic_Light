@@ -5,6 +5,10 @@ void DIO.Init (int_8 port, int_8 pin, int_8 dir)
 {
 
   set_bit(SYSCTL_RCGCGPIO_R, port)
+  while((SYSCTL_PRGPIO_R & port) == 0){};
+  GPIO_PORTF_LOCK_R = 0x4C4F434B;
+  DIO_WritePin(Pin,value);
+  
     switch(port){
       case port PORTA:
         if (dir)
